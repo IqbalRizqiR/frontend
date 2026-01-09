@@ -1,0 +1,245 @@
+@import url("https://fonts.cdnfonts.com/css/planer");
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --linear: linear-gradient(to right, 24deg, #ffffff 100%, #ffffff 0%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-poppins: "Poppins", sans-serif;
+  --font-planer: "Planer", sans-serif;
+  --color-primary: #a2181c;
+  --color-young-red: #fe0c0b;
+  --color-secondary: #e15f60;
+  --color-secondary-text: #e04e4e;
+  --color-secondary-bg: #f9dcdc;
+  --color-plain-red: #e9e2ea;
+  --color-darker-blue: #1f283e;
+  --color-gradient-circle: var(--linear);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ========================================== */
+/* GLOBAL SCROLLBAR - RED WITH TRANSPARENT BG */
+/* ========================================== */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #bd0000 transparent;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #880000;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #880000;
+}
+
+/* ========================================== */
+/* END GLOBAL SCROLLBAR */
+/* ========================================== */
+
+.gradient-circle {
+  /* background: linear-gradient(210deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); */
+  background: linear-gradient(
+    210deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.text-stroke {
+  -webkit-text-stroke: 8px #e7232a;
+  paint-order: stroke fill;
+}
+.text-float-stroke {
+  -webkit-text-stroke: 3px #e7232a;
+  paint-order: stroke fill;
+}
+
+.clip-noir {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 91%, 0 91%);
+}
+
+.curved {
+  background: radial-gradient(
+      120% 125px at 50% -35px,
+      #e9e2ea 75%,
+      transparent 75%
+    )
+    no-repeat;
+}
+
+/* Sparkle Shape */
+.sparkle {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.sparkle-large {
+  width: 20px;
+  height: 20px;
+}
+
+.sparkle-small {
+  width: 8px;
+  height: 8px;
+}
+
+.sparkle::before,
+.sparkle::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-radius: 1px;
+}
+
+/* Vertical line of sparkle */
+.sparkle::before {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* Horizontal line of sparkle */
+.sparkle::after {
+  width: 100%;
+  height: 2px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Large sparkle lines */
+.sparkle-large::before {
+  width: 3px;
+}
+
+.sparkle-large::after {
+  height: 3px;
+}
+
+/* Small sparkle lines */
+.sparkle-small::before {
+  width: 1.5px;
+}
+
+.sparkle-small::after {
+  height: 1.5px;
+}
+
+/* Animations */
+@keyframes sparkle-twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(45deg);
+  }
+}
+
+@keyframes sparkle-rotate {
+  0% {
+    opacity: 0.4;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    opacity: 0.8;
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(180deg) scale(0.9);
+  }
+  75% {
+    opacity: 0.6;
+    transform: rotate(270deg) scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  33% {
+    transform: translateY(-15px) translateX(8px);
+  }
+  66% {
+    transform: translateY(-5px) translateX(-8px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes gentle-pulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+.anim-circle-1 {
+  animation: float 6s ease-in-out infinite;
+}
+.anim-circle-2 {
+  animation: float 8s ease-in-out infinite 1s;
+}
+.anim-circle-3 {
+  animation: float 7s ease-in-out infinite 2s;
+}
+.anim-circle-4 {
+  animation: pulse-glow 5s ease-in-out infinite;
+}
+.anim-circle-5 {
+  animation: pulse-glow 6s ease-in-out infinite 1.5s;
+}

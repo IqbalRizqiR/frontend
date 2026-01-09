@@ -1,5 +1,4 @@
 import { FAQCardProps } from "../card";
-import { LeaderComponent } from "../Leader";
 // import { TrackRecordProps } from "../TrackRecord";
 
 // export const TrackData: TrackRecordProps[] = [
@@ -115,63 +114,6 @@ import { LeaderComponent } from "../Leader";
 //     country: "Malaysia",
 //   },
 // ];
-export const LeadersData: LeaderComponent[] = [
-  {
-    name: "Achmad Ilham Ramadhani",
-    role: "Pembimbing",
-    image: "/assets/image/pembimbing.png",
-  },
-  {
-    name: "Sauqy Rahmatul Ramadhan",
-    role: "Ketua Umum",
-    image: "/assets/image/ketuaMTC.png",
-  },
-  {
-    name: "Muhammad Syamil Muwahhid",
-    role: "Ketua Internal",
-    image: "/assets/image/ketuaintern.png",
-  },
-  {
-    name: "Naufal Nabil R.",
-    role: "MokletDev General Manager",
-    image: "/assets/image/ Metizen 32/Naufal-LeaderPage.png",
-  },
-  {
-    name: "Muhammad Radika A. B.",
-    role: "Medcom General Manager",
-    image: "/assets/image/Leadmedcom.png",
-  },
-  {
-    name: "Arsyad Ali M.",
-    role: "Merch General Manager",
-    image: "/assets/image/LeadMerch.png",
-  },
-  {
-    name: "Arsyad Ali M.",
-    role: "Merch General Manager",
-    image: "/assets/image/LeadMerch.png",
-  },
-  {
-    name: "Arsyad Ali M.",
-    role: "Merch General Manager",
-    image: "/assets/image/LeadMerch.png",
-  },
-  {
-    name: "Arsyad Ali M.",
-    role: "Merch General Manager",
-    image: "/assets/image/LeadMerch.png",
-  },
-  {
-    name: "Arsyad Ali M.",
-    role: "Merch General Manager",
-    image: "/assets/image/LeadMerch.png",
-  },
-  {
-    name: "Arsyad Ali M.",
-    role: "Merch General Manager",
-    image: "/assets/image/LeadMerch.png",
-  },
-];
 export const dataFAQ: FAQCardProps[] = [
 
   {

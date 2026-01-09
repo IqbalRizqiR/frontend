@@ -2,8 +2,8 @@
 FROM node:24-alpine AS build
 WORKDIR /app
 COPY . .
-RUN DISABLE_ESLINT_PLUGIN=true npm install --legacy-peer-deps
-RUN npm run build
+RUN npm install --legacy-peer-deps
+RUN DISABLE_ESLINT_PLUGIN=true npm run build
 
 FROM nginx:alpine
 COPY --from=build /app/out /usr/share/nginx/html

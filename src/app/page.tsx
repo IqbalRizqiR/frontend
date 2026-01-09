@@ -1,6 +1,5 @@
 import Header from './_components/Header'
 
-import Leader from './_components/Leader'
 
 import Faq from './_components/FAQ'
 

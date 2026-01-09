@@ -6,5 +6,5 @@ RUN npm install --legacy-peer-deps
 RUN DISABLE_ESLINT_PLUGIN=true npm run build
 
 FROM nginx:alpine
-COPY --from=build /app/out /usr/share/nginx/html
+COPY --from=build /out /usr/share/nginx/html
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
